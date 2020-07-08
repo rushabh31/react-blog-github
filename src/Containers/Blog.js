@@ -78,10 +78,10 @@ const Blog = () => {
             value: 5
           },
           color: {
-            value: "#167cd8"
+            value: "#4db5e6"
           },
           lineLinked: {
-            color:'#167cd8',
+            color:'#4db5e6',
             opacity:0.075,
             distance: 250
 
