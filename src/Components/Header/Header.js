@@ -13,16 +13,16 @@ import { config } from "../../config"
 export const Header = () => {
     return (
         <HeaderContainer>
-        <div className="headerimg">
-         <img class="headerimgcls"
-           alt="Rushabh sitting on table"
-           src={require("../../assets/notebook2.svg")}
-         ></img>
-       </div>
-            <GithubLogin isAbsolute={true} />
+
             <HeaderWrapper>
                 <HeaderTitle>{config.title}</HeaderTitle>
                 <HeaderSubtitle>{config.subtitle}</HeaderSubtitle>
+                <div className="headerimg">
+                 <img class="headerimgcls" width="200px"
+                   alt="Rushabh sitting on table"
+                   src={require("../../assets/notebook.svg")}
+                 ></img>
+               </div>
             </HeaderWrapper>
         </HeaderContainer>
     )
