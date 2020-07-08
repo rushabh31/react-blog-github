@@ -6,7 +6,7 @@ export const config = {
   githubUserName: "rushabh31",
 
   // Your Github Repo Name Where You Have your issues as Blog
-  githubRepo: "react-blog-github",
+  githubRepo: "blogs",
 
   // Set it to true if you have a Github app to add to this project
   // and fill the client ID & secret
@@ -24,7 +24,7 @@ export const config = {
   header: {
     backgroundColor: '#f1f6f8', // can be a CSS gradient
     backgroundColorDark: '#4C566A',
-    titleColor: '#ff5252',
+    titleColor: '#277aa9',
     titleColorDark: '#16a085',
     subtitleColor: '#37474f',
     subtitleColorDark: '#D8DEE9',

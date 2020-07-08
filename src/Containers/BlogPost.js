@@ -16,7 +16,8 @@ import { Loader } from "../Components/Common";
 import { PostContainer, PostTitle, PostDate, PostDateLink, PostReaction, BackButton } from "../Components/Post";
 import { AuthorDetails, AuthorAvatar, AuthorName } from "../Components/Post/Author";
 import { GithubLogin } from '../Components/Header'
-
+import Particles from 'react-particles-js';
+import "../index.css";
 export default function BlogHome() {
   const issueNumber = parseInt(window.location.href.split("/").pop());
   const GET_POSTS = gql`{
@@ -215,7 +216,45 @@ export default function BlogHome() {
             onAdd={() => setReactionPopup(!reactionPopup)}
           />
         </PostContainer>
+
+
       )}
+      <Particles
+      params={{
+        particles: {
+          opacity: {
+            value:0.075
+          },
+          size: {
+            value: 5
+          },
+          color: {
+            value: "#167cd8"
+          },
+          lineLinked: {
+            color:'#167cd8',
+            opacity:0.075,
+            distance: 250
+
+          },
+          anim:{
+            sync:true
+          },
+          number: {
+            value: 150
+          }
+        },
+        interactivity: {
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse"
+            }
+        }
+      }
+      }}
+      id="mainParticles"
+      />
     </>
   );
 }

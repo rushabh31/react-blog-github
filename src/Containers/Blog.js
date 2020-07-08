@@ -7,6 +7,8 @@ import { Header } from "../Components/Header";
 import { Loader } from '../Components/Common'
 import { BlogContainer } from '../Components/Blog'
 import { Card } from '../Components/Blog/Card'
+import Particles from 'react-particles-js';
+import "../index.css";
 
 const GET_POSTS = gql`
 {
@@ -66,6 +68,43 @@ const Blog = () => {
             })
         }
       </BlogContainer>
+      <Particles
+      params={{
+        particles: {
+          opacity: {
+            value:0.075
+          },
+          size: {
+            value: 5
+          },
+          color: {
+            value: "#167cd8"
+          },
+          lineLinked: {
+            color:'#167cd8',
+            opacity:0.075,
+            distance: 250
+
+          },
+          anim:{
+            sync:true
+          },
+          number: {
+            value: 150
+          }
+        },
+        interactivity: {
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse"
+            }
+        }
+      }
+      }}
+      id="mainParticles"
+      />
+
     </>
   );
 }

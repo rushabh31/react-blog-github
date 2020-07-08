@@ -1,4 +1,5 @@
 import React from 'react'
+import "../../index.css";
 
 import {
     HeaderContainer,
@@ -12,6 +13,12 @@ import { config } from "../../config"
 export const Header = () => {
     return (
         <HeaderContainer>
+        <div className="headerimg">
+         <img class="headerimgcls"
+           alt="Rushabh sitting on table"
+           src={require("../../assets/notebook2.svg")}
+         ></img>
+       </div>
             <GithubLogin isAbsolute={true} />
             <HeaderWrapper>
                 <HeaderTitle>{config.title}</HeaderTitle>
