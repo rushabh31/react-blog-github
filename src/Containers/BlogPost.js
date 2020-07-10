@@ -205,18 +205,20 @@ export default function BlogHome() {
           >
             {post.body}
           </Markdown>
-
-
-          <GitalkComponent options={{
-            clientID: "273250111090f5817f51",
-            clientSecret: 'ab1cd1c874ed18fd27995f8aa4315764a8446f00',
-            repo: 'blogs',      // The repository of store comments,
-            owner: 'rushabh31',
-            admin: 'rushabh31',
-            title:window.location.title,
-            number:2,
-            distractionFreeMode: false  // Facebook-like distraction free mode
-          }} />
+          {reactionPopup && (
+            <PostReaction>
+              {userToken
+                ? <GithubSelector onSelect={emoji => toggleReaction(emoji)} />
+                : <GithubLogin isAbsolute={false} />
+              }
+            </PostReaction>
+          )}
+          <GithubCounter
+            ref={reactionsContainer}
+            counters={postReactions}
+            onSelect={emoji => toggleReaction(emoji)}
+            onAdd={() => setReactionPopup(!reactionPopup)}
+          />
         </PostContainer>
 
 
