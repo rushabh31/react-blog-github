@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import bkgimg from '../../assets/notebook.svg'
 
 
 import {
@@ -40,6 +41,7 @@ export const Header = () => {
     return (
         <HeaderContainer>
 
+
             <HeaderWrapper>
             <ButtonContainer>
 
@@ -55,14 +57,15 @@ export const Header = () => {
             </ButtonContainer>
                 <HeaderTitle>{config.title}</HeaderTitle>
                 <HeaderSubtitle>{config.subtitle}</HeaderSubtitle>
-                <div className="headerimg">
+                {/*<div className="headerimg">
                  <img class="headerimgcls" width="200px"
                    alt="Rushabh sitting on table"
                    src={require("../../assets/notebook.svg")}
                  ></img>
-               </div>
+               </div>*/}
             </HeaderWrapper>
 
         </HeaderContainer>
+
     )
 }

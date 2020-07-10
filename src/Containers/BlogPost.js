@@ -18,6 +18,10 @@ import { AuthorDetails, AuthorAvatar, AuthorName } from "../Components/Post/Auth
 import { GithubLogin } from '../Components/Header'
 import Particles from 'react-particles-js';
 import "../index.css";
+import 'gitalk/dist/gitalk.css'
+import Gitalk from 'gitalk'
+import GitalkComponent from "gitalk/dist/gitalk-component";
+
 export default function BlogHome() {
   const issueNumber = parseInt(window.location.href.split("/").pop());
   const GET_POSTS = gql`{
@@ -201,20 +205,18 @@ export default function BlogHome() {
           >
             {post.body}
           </Markdown>
-          {reactionPopup && (
-            <PostReaction>
-              {userToken
-                ? <GithubSelector onSelect={emoji => toggleReaction(emoji)} />
-                : <GithubLogin isAbsolute={false} />
-              }
-            </PostReaction>
-          )}
-          <GithubCounter
-            ref={reactionsContainer}
-            counters={postReactions}
-            onSelect={emoji => toggleReaction(emoji)}
-            onAdd={() => setReactionPopup(!reactionPopup)}
-          />
+
+
+          <GitalkComponent options={{
+            clientID: "273250111090f5817f51",
+            clientSecret: 'ab1cd1c874ed18fd27995f8aa4315764a8446f00',
+            repo: 'blogs',      // The repository of store comments,
+            owner: 'rushabh31',
+            admin: 'rushabh31',
+            title:window.location.title,
+            number:2,
+            distractionFreeMode: false  // Facebook-like distraction free mode
+          }} />
         </PostContainer>
 
 

@@ -7,7 +7,9 @@ export const HeaderContainer = styled.div`
   position: relative;
   padding: 5em;
   text-align: center;
-  background: ${(props) => props.theme.mode === "light" ? backgroundColor : backgroundColorDark};
+  /*background: ${(props) => props.theme.mode === "light" ? backgroundColor : backgroundColorDark};*/
+  background-image: url('../assets/notebook.svg');
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

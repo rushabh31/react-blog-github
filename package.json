@@ -14,7 +14,9 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "apollo-boost": "^0.4.7",
+    "gatsby": "^2.24.1",
     "gh-pages": "^2.2.0",
+    "gitalk": "^1.6.2",
     "graphql": "^14.5.8",
     "markdown-to-jsx": "^6.11.4",
     "medium.css": "^1.0.2",
@@ -23,6 +25,7 @@
     "react-dom": "^16.12.0",
     "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
+    "react-inline-script": "^1.2.0",
     "react-particles-js": "^3.2.1",
     "react-reactions": "github:randomdipesh/react-reactions",
     "react-router-dom": "^5.1.2",
@@ -53,5 +56,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.4"
   }
 }
