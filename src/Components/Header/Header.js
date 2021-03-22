@@ -3,8 +3,6 @@ import "../../index.css";
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import bkgimg from '../../assets/notebook.svg'
 
 
 import {

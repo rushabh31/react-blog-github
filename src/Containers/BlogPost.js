@@ -19,8 +19,6 @@ import { GithubLogin } from '../Components/Header'
 import Particles from 'react-particles-js';
 import "../index.css";
 import 'gitalk/dist/gitalk.css'
-import Gitalk from 'gitalk'
-import GitalkComponent from "gitalk/dist/gitalk-component";
 
 export default function BlogHome() {
   const issueNumber = parseInt(window.location.href.split("/").pop());
