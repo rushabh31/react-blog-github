@@ -23,7 +23,7 @@ const ButtonContainer = styled.div`
 `
 const Button = styled.button`
   -webkit-appearance: none;
-  background: linear-gradient(180deg, rgb(136, 220, 109) 0%, rgb(92, 168, 65) 100%);
+  background: #e4405f;
   color: #FFF;
   border: none;
   padding: 8px 16px;
